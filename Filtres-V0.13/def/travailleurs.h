@@ -3,12 +3,12 @@
 #include "mdl.h"
 
 #define TRAVAILLEURS 4
-#define SECONDES_EXISTANCE_MAXIMALE 30
+#define SECONDES_EXISTANCE_MAXIMALE 5
 
 //	Les maitres
 void maitre_cree_travailleurs();
 Mdl_t * maitre_lancer_calcule_selection(
-	Mdl_t * mdl,
+	Mdl_t * mdl, float score_mdl,
 	uint enchainner,	//cmb chaque travailleur
 						// enchainsera de mdl
 	uint cMin, uint cMax,	//	cadrans a muter

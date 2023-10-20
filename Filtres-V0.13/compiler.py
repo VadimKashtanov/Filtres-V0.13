@@ -38,7 +38,11 @@ chemins_impl = [
 	'impl/etc/',
 
 	'impl/mdl/',
-	'impl/mdl/f/'
+	'impl/mdl/f/',
+
+	'impl/main/',
+
+	'impl/travailleurs/'
 ]
 fichiers_impl = [
 	chemin+fichier

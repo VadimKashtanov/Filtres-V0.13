@@ -46,7 +46,11 @@ void lisser(float * arr, uint n, float A);
 //	====== Lire fichier ======
 
 float lire_flotant(char * fichier);
-void ecrire_flotant(float a , char * fichier);
-void ecrire_uint(uint a, char * fichier);
+void ecrire_flotant(char * fichier, float a);
+//
+void ecrire_uint(char * fichier, uint a);
 uint lire_uint(char * fichier);
 void lire_N_uint(char * fichier, uint * _uint, uint _N);
+//
+void ecrire_char(char * fichier, char a);
+char lire_char(char * fichier);

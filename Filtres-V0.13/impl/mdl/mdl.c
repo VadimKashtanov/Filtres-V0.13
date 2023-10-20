@@ -9,6 +9,12 @@ Mdl_t * cree_mdl() {
 	return mdl;
 };
 
+Mdl_t * copier_mdl(Mdl_t * mdl) {
+	Mdl_t * _mdl = (Mdl_t*)malloc(sizeof(Mdl_t));
+	memcpy(_mdl, mdl, sizeof(Mdl_t));
+	return _mdl;
+};
+
 void preparer_mdl(Mdl_t * mdl) {
 	FOR(0, i, F) {
 		FOR(0, j, N-1)

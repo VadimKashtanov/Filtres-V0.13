@@ -16,6 +16,7 @@
 #include <unistd.h>
 #include <stdalign.h>
 #include <pthread.h>
+#include <fcntl.h>
 //
 #include <x86intrin.h>
  

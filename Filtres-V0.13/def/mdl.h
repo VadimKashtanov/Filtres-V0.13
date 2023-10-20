@@ -21,6 +21,7 @@ typedef struct {
 
 //	Mem
 Mdl_t * cree_mdl();
+Mdl_t * copier_mdl(Mdl_t * mdl);
 void preparer_mdl(Mdl_t * mdl);
 void liberer_mdl(Mdl_t * mdl);
 

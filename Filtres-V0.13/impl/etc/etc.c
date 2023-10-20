@@ -124,14 +124,14 @@ float lire_flotant(char * fichier) {
 }
 
 PAS_OPTIMISER()
-void ecrire_flotant(float a , char * fichier) {
+void ecrire_flotant(char * fichier, float a) {
 	FILE * fp = fopen(fichier, "wb");
 	(void)!fwrite(&a, sizeof(float), 1, fp);
 	fclose(fp);
 };
 
 PAS_OPTIMISER()
-void ecrire_uint(uint a, char * fichier) {
+void ecrire_uint(char * fichier, uint a) {
 	FILE * fp = fopen(fichier, "wb");
 	(void)!fwrite(&a, sizeof(uint), 1, fp);
 	fclose(fp);
@@ -149,6 +149,23 @@ uint lire_uint(char * fichier) {
 PAS_OPTIMISER()
 void lire_N_uint(char * fichier, uint * _uint, uint _N) {
 	FILE * fp = fopen(fichier, "rb");
-	(void)!fread(_uint, sizeof(uint), _, fp);
+	(void)!fread(_uint, sizeof(uint), 1, fp);
 	fclose(fp);
+};
+
+//	-- char
+PAS_OPTIMISER()
+void ecrire_char(char * fichier, char a) {
+	FILE * fp = fopen(fichier, "wb");
+	(void)!fwrite(&a, sizeof(char), 1, fp);
+	fclose(fp);
+};
+
+PAS_OPTIMISER()
+char lire_char(char * fichier) {
+	FILE * fp = fopen(fichier, "rb");
+	char res;
+	(void)!fread(&res, sizeof(char), 1, fp);
+	fclose(fp);
+	return res;
 };
